@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IME Capsule</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+  <div id="app">
+    <h1>IME Time Capsule</h1>
+    <div id="auth">
+      <h2>Register</h2>
+      <input type="email" id="regEmail" placeholder="Email">
+      <input type="password" id="regPass" placeholder="Password">
+      <button onclick="register()">Register</button>
+
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPass" placeholder="Password">
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="capsule" style="display: none">
+      <h2>Create Message</h2>
+      <textarea id="message" placeholder="Type your message..."></textarea>
+      <input type="datetime-local" id="unlockDate">
+      <button onclick="sendMessage()">Submit</button>
+
+      <h2>Your Messages</h2>
+      <ul id="messagesList"></ul>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
